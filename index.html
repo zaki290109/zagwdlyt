@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Arena - Game Poster</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Poster Landscape */
+        .poster-landscape {
+            width: 100%;
+            max-width: 850px;
+            background: linear-gradient(135deg, #1f2833 0%, #0b0c10 100%);
+            border-radius: 24px;
+            padding: 30px;
+            border: 2px solid #66fcf1;
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Vector Logo Header */
+        .logo-container {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .logo-container svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Grid Informasi Poster */
+        .poster-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 16px;
+            border-radius: 12px;
+            border-left: 4px solid #66fcf1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            font-size: 20px;
+        }
+
+        .feature-text h4 {
+            font-size: 13px;
+            color: #66fcf1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .feature-text p {
+            font-size: 12px;
+            color: #c5c6c7;
+        }
+
+        /* Panel Kanan (Aksi & Detail) */
+        .action-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(102, 252, 241, 0.2);
+        }
+
+        .action-panel h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .action-panel p {
+            font-size: 12px;
+            color: #c5c6c7;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 28px;
+            background: #66fcf1;
+            color: #0b0c10;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(102, 252, 241, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #45a29e;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(69, 162, 158, 0.5);
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        @media (max-width: 650px) {
+            .poster-body {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-landscape">
+        <!-- Banner Logo SVG Landscape -->
+        <div class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+                <rect width="800" height="240" rx="20" fill="#0b0c10"/>
+                <rect x="10" y="10" width="780" height="220" rx="15" fill="none" stroke="#66fcf1" stroke-width="2"/>
+
+                <!-- Logo Icon -->
+                <g transform="translate(60, 20)">
+                    <g transform="translate(130, 20)">
+                        <path d="M 0 -10 C 8 -25 24 -25 28 -15 C 16 0 0 -8 0 -10 Z" fill="#66fcf1"/>
+                        <path d="M -30 0 C -50 -15 -60 30 -35 50 C -20 65 0 60 0 60 C 0 60 20 65 35 50 C 60 30 50 -15 30 0 C 20 8 -20 8 -30 0 Z" fill="#ff2e63"/>
+                    </g>
+                    <path d="M 20 150 L 80 150 L 80 90 L 140 90" fill="none" stroke="#45a29e" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g transform="translate(20, 150)">
+                        <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#66fcf1"/>
+                        <circle cx="-6" cy="-6" r="3.5" fill="#0b0c10"/>
+                        <circle cx="-6" cy="6" r="3.5" fill="#0b0c10"/>
+                        <path d="M -20 0 L -32 -6 M -20 0 L -32 6" stroke="#ff2e63" stroke-width="3.5" stroke-linecap="round"/>
+                    </g>
+                </g>
+
+                <!-- Logo Text -->
+                <g transform="translate(340, 110)">
+                    <text x="0" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="64" fill="#66fcf1" letter-spacing="4">
+                        SNAKE
+                    </text>
+                    <text x="5" y="60" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="28" fill="#45a29e" letter-spacing="10">
+                        ARENA
+                    </text>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Konten Poster -->
+        <div class="poster-body">
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-text">
+                        <h4>Level & Timer</h4>
+                        <p>Kecepatan meningkat seiring bertambahnya skor.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🤖</span>
+                    <div class="feature-text">
+                        <h4>Mode AI Komputer</h4>
+                        <p>Tantang ular kecerdasan buatan.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">👥</span>
+                    <div class="feature-text">
+                        <h4>Local 2 Players</h4>
+                        <p>Bermain bersama teman dalam 1 layar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-panel">
+                <h3>LIHAT POSTER</h3>
+                <p>Klik tombol di bawah untuk membuka gambar poster asli!</p>
+                <!-- Tautan mengarah ke posterland.png -->
+                <a href="posterland.png" target="_blank" class="play-button">Buka Poster</a>
+                <div class="footer-text">Project Open Source • HTML5 Canvas</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
